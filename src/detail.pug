@@ -1,0 +1,53 @@
+extends layout/main/main
+block title
+  | detail
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      
+      .content-wrap
+        .detail 
+          .detail__wrap 
+            .detail__col 
+              .detail__img  
+                img(src="assets/img/detail.jpg", alt="") 
+            .detail__col
+              .detail__name  G minor bach
+              .detail__author Jasper van Soolingen
+              ul 
+                li 
+                  i.icon-clock
+                  span 05:01
+                li  
+                  i.icon-page
+                  span Количество страниц: 8
+                li 
+                  i.icon-note
+                  span B♭ major, G minor
+              .detail__desc
+                p Uploaded on Mar 12, 2015 <br>
+                  | 8/23/2015 - Converted to Version 2.0.2 (Mellow Yamaha Grand Piano) <br>
+                  | 3/16/2015 - Finished scoring the fantasia, but am debating on whether to tack it onto the front of this wonderful fugue. The fantasia is not exactly my cup of tea...mostly just a lot of loud banging around to me. Maybe I'll upload it separately and watch the statistics. <br>
+                  | 3/13/2015 – Found an arrangement of the fantasia by Tagliapietra that is somewhat more playable than the Lizst version. It will be inserted at the beginning in the near future. <br>
+                  | 3/12/2015 - Upload of the fugue. The fastasia arrangement by Lizst is just too complex.
+              .detail__control  
+                a.btn.btn--mc(href="#") 
+                  i.icon-download
+                  | Загрузить PDF   
+                a.btn.btn--sc(href="#") 
+                  i.icon-print
+                  | Распечатать   
+
+
+
+        h2.title Рекомендации
+        include includes/items-row
+
+      include includes/log
+ 
+
+     
+
+
+  include includes/scripts 

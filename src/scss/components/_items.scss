@@ -1,0 +1,151 @@
+.items {
+  @include adaptiv('margin-bottom', 35, 20, 0);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--row {
+    @include adaptiv('margin-bottom', 5, 20, 0);
+
+    .items__wrap {
+      @include aistr-jfcsb;
+
+      @include lg {
+        flex-wrap: wrap;
+      }
+
+      .items__item {
+        width: calc(20% - 18px);
+        margin-bottom: rem(20);
+
+        @include lg {
+          width: calc(25% - 18px);
+        }
+
+        @include md {
+          width: calc(33% - 5px);
+        }
+
+        @include sm {
+          width: calc(50% - 5px);
+        }
+
+        @media (max-width: 370px) {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+
+  &--column {
+    .items__wrap {
+      @include xs {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    }
+
+    .items__item {
+      @include aic;
+      margin-bottom: rem(15);
+
+      @include xs {
+        width: calc(50% - 5px);
+        flex-direction: column;
+      }
+
+      @media (max-width: 370px) {
+        width: 100%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .items__item-img {
+      max-width: rem(125);
+      width: 100%;
+      @include adaptiv('margin-right', 24, 10, 0);
+
+      @include xs {
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    .items__item-add-info {
+      flex-direction: column;
+      align-items: start;
+
+      @include xs {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__wrap {
+    i {
+      color: $mc;
+      margin-right: rem(5);
+    }
+  }
+
+  &__item {
+    padding: rem(10);
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.1);
+    border-radius: rem(10);
+
+    .btn {
+      display: inline-flex;
+      border-radius: rem(10);
+      margin-right: rem(5);
+      font-size: rem(10);
+      min-height: rem(20);
+      padding: rem(5) rem(10);
+      margin-top: rem(10) !important;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__item-name {
+    @include adaptiv('font-size', 14, 12, 0);
+    margin-bottom: rem(10);
+    color: $mc;
+    transition: $tr;
+
+    &:hover {
+      color: $sc;
+    }
+  }
+
+  &__item-add-author {
+    color: $bc;
+    font-size: rem(12);
+    font-weight: 600;
+    margin-top: rem(10);
+  }
+
+  &__item-add-info {
+    color: #7e7e7e;
+    font-size: rem(10);
+    font-weight: 600;
+    @include aic-jfcsb;
+
+    span {
+      margin-top: rem(10);
+      @include aic;
+      margin-right: rem(10);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

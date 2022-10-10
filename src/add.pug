@@ -1,0 +1,51 @@
+extends layout/main/main
+block title
+  | main
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .profile
+        .banner
+          img(src="assets/img/profile-bg.jpg", alt="")
+        .content-wrap
+          .profile__img 
+            .profile__img-wrap 
+              img(src="assets/img/profile.png", alt="")
+          h2.title Добавление новой композиции    
+          .profile__form
+            form(action="") 
+              .input 
+                input(type="text" placeholder="Название композиции") 
+              .input 
+                input(type="text" placeholder="Исполнитель/автор") 
+              .input 
+                input(type="text" placeholder="Длительность")
+              .input-wrap    
+                .input 
+                  input(type="text" placeholder="Количество страниц") 
+                .input 
+                  input(type="text" placeholder="Количество партий") 
+              .input 
+                input(type="text" placeholder="Описание") 
+              .input 
+                input(type="text" placeholder="Описание")
+
+              .input-file
+                input(type="file")
+                i.icon-paperclip
+                | Прикрепить файл
+
+                .input-file-name
+              button.btn.btn--mc Загрузить композицию
+              
+        include includes/log
+
+        .moderation 
+          .moderation__message Композиция в <br> модерации!
+
+
+     
+
+
+  include includes/scripts 

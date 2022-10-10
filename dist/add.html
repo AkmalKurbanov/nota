@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>main
+    </title>
+    <link rel="stylesheet" href="assets/styles.min.css">
+    <link link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  </head>
+</html>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrap"> 
+            <div class="header__col">
+              <div class="logo"><a href="#"><img src="assets/img/logo.png" alt=""></a></div>
+              <div class="search">
+                <div class="search__input-wrap"><i class="icon-search"></i>
+                  <div class="search__input">
+                    <input type="text" placeholder="Найти...">
+                  </div>
+                </div>
+                <button class="btn btn--mc">Поиск</button>
+                <div class="search__dropdown">
+                  <ul>
+                                        <li class="search__dropdown-result"><a href="#">giacomo+puccini</a></li>
+                                        <li class="search__dropdown-result"><a href="#">genshin</a></li>
+                                        <li class="search__dropdown-result"><a href="#">gurenge</a></li>
+                                        <li class="search__dropdown-result"><a href="#">gravity falls</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header__col">
+              <div class="header__control"> <a class="header__control-item search-btn" href="#"><i class="icon-search"> </i></a><a class="header__control-item" href="#"><i class="icon-cloud"> </i></a><a class="header__control-item" href="#"><i class="icon-user"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="profile">
+        <div class="banner"><img src="assets/img/profile-bg.jpg" alt=""></div>
+        <div class="content-wrap">
+          <div class="profile__img"> 
+            <div class="profile__img-wrap"> <img src="assets/img/profile.png" alt=""></div>
+          </div>
+          <h2 class="title">Добавление новой композиции    </h2>
+          <div class="profile__form">
+            <form action=""> 
+              <div class="input"> 
+                <input type="text" placeholder="Название композиции">
+              </div>
+              <div class="input"> 
+                <input type="text" placeholder="Исполнитель/автор">
+              </div>
+              <div class="input"> 
+                <input type="text" placeholder="Длительность">
+              </div>
+              <div class="input-wrap">   
+                <div class="input"> 
+                  <input type="text" placeholder="Количество страниц">
+                </div>
+                <div class="input"> 
+                  <input type="text" placeholder="Количество партий">
+                </div>
+              </div>
+              <div class="input"> 
+                <input type="text" placeholder="Описание">
+              </div>
+              <div class="input"> 
+                <input type="text" placeholder="Описание">
+              </div>
+              <div class="input-file">
+                <input type="file"><i class="icon-paperclip"></i>Прикрепить файл
+                <div class="input-file-name"></div>
+              </div>
+              <button class="btn btn--mc">Загрузить композицию</button>
+            </form>
+          </div>
+        </div>
+        <div class="log" id="log-in">
+          <div class="log__window">
+            <div class="log__window-top">
+              <div class="log__title">Войти</div>
+              <form action=""> 
+                <div class="input">     
+                  <input type="text" placeholder="Электронная почта">
+                </div>
+                <div class="input">     
+                  <input type="text" placeholder="Пароль">
+                </div>
+                <button class="btn btn--mc">Продолжить</button>
+              </form><a class="forgot" href="#">Забыли пароль?</a>
+              <div class="alternate">
+                <div class="alternate__item"><img src="assets/img/btn1.png" alt=""></div>
+                <div class="alternate__item"><img src="assets/img/btn2.png" alt=""></div>
+                <div class="alternate__item"><img src="assets/img/btn3.png" alt=""></div>
+              </div>
+            </div>
+            <div class="log__window-bottom"> 
+              <p>Еще не зарегистрированы?</p><a class="btn btn--sc registration" href="#">Еще не зарегистрированы? </a>
+            </div>
+          </div>
+        </div>
+        <div class="log" id="registration">
+          <div class="log__window">
+            <div class="log__window-top">
+              <div class="log__title">Регистрация</div>
+              <form action=""> 
+                <div class="input">
+                  <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="input">
+                  <input type="text" placeholder="Электронная почта">
+                </div>
+                <div class="input">
+                  <input type="text" placeholder="Пароль">
+                </div>
+                <button class="btn btn--sc">Регистрация</button>
+                <p class="alt">войти через</p>
+              </form>
+              <div class="alternate">
+                <div class="alternate__item"><img src="assets/img/btn1.png" alt=""></div>
+                <div class="alternate__item"><img src="assets/img/btn2.png" alt=""></div>
+                <div class="alternate__item"><img src="assets/img/btn3.png" alt=""></div>
+              </div>
+            </div>
+            <div class="log__window-bottom"> 
+              <p>Есть аккаунт?</p><a class="btn btn--mc log-in" href="#">Войти</a>
+            </div>
+          </div>
+        </div>
+        <div class="moderation"> 
+          <div class="moderation__message">Композиция в <br> модерации!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/scripts.min.js"></script>
+</body>

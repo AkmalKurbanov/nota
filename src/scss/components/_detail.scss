@@ -1,0 +1,102 @@
+.detail {
+  @include adaptiv('margin-bottom', 80, 30, 0);
+
+  &__wrap {
+    @include aife;
+
+    @include md {
+      align-items: flex-start;
+    }
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    &:first-child {
+      margin-right: rem(13);
+
+      @include sm {
+        margin-right: 0;
+        margin-bottom: rem(20);
+      }
+    }
+  }
+
+  &__img {
+    @include adaptiv('min-width', 380, 200, 0);
+    @include aife;
+  }
+
+  &__name {
+    font-weight: 700;
+    color: $mc;
+    margin-bottom: rem(5);
+    @include adaptiv('font-size', 32, 20, 0);
+  }
+
+  &__author {
+    @include adaptiv('font-size', 25, 13, 0);
+    color: $bc;
+    @include adaptiv('margin-bottom', 28, 13, 0);
+  }
+
+  ul {
+    @include adaptiv('margin-bottom', 40, 25, 0);
+
+    li {
+      color: #7E7E7E;
+      margin-bottom: rem(20);
+      font-weight: 600;
+      @include adaptiv('font-size', 18, 13, 0);
+
+      i {
+        color: $mc;
+        margin-right: rem(13);
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: rem(20);
+
+    p {
+      color: #7e7e7e;
+      font-size: rem(14);
+      margin-bottom: rem(10);
+      line-height: 19.07px;
+    }
+  }
+
+  &__control {
+    @include aic;
+
+    @include xs {
+      flex-direction: column;
+    }
+
+    .btn {
+      margin-right: rem(25);
+      padding: 0 rem(25);
+
+      @include adaptiv('border-radius', 26, 13, 0);
+      @include adaptiv('min-height', 60, 35, 0);
+      @include adaptiv('font-size', 20, 15, 0);
+
+      @include xs {
+        width: 100%;
+        margin: 0;
+        margin-bottom: rem(10);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      i {
+        @include adaptiv(' margin-right', 15, 5, 0);
+      }
+    }
+  }
+}

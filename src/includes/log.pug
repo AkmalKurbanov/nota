@@ -1,0 +1,44 @@
+.log#log-in
+  .log__window
+    .log__window-top
+      .log__title Войти
+      form(action="") 
+        .input      
+          input(type="text" placeholder="Электронная почта")
+        .input      
+          input(type="text" placeholder="Пароль")
+        button.btn.btn--mc Продолжить
+      a(href="#").forgot Забыли пароль?
+      .alternate
+        .alternate__item
+          img(src="assets/img/btn1.png", alt="")
+        .alternate__item
+          img(src="assets/img/btn2.png", alt="")
+        .alternate__item
+          img(src="assets/img/btn3.png", alt="")
+    .log__window-bottom 
+      p Еще не зарегистрированы?
+      a(href="#").btn.btn--sc.registration Еще не зарегистрированы? 
+.log#registration
+  .log__window
+    .log__window-top
+      .log__title Регистрация
+      form(action="") 
+        .input
+          input(type="text" placeholder="Ваше имя")
+        .input
+          input(type="text" placeholder="Электронная почта")
+        .input
+          input(type="text" placeholder="Пароль")
+        button.btn.btn--sc Регистрация
+        p.alt войти через
+      .alternate
+        .alternate__item
+          img(src="assets/img/btn1.png", alt="")
+        .alternate__item
+          img(src="assets/img/btn2.png", alt="")
+        .alternate__item
+          img(src="assets/img/btn3.png", alt="")
+    .log__window-bottom 
+      p Есть аккаунт?
+      a(href="#").btn.btn--mc.log-in Войти

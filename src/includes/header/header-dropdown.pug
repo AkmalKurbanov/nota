@@ -1,0 +1,31 @@
+header.header
+  .container
+    .header__wrap 
+      .header__col
+        .logo
+          a(href="#")
+            img(src="assets/img/logo.png", alt="")  
+        .search.active
+          .search__input-wrap
+            i.icon-search
+            .search__input
+              input(type="text" placeholder="Найти...")
+          button.btn.btn--mc Поиск
+          .search__dropdown
+            ul
+              mixin result(title) 
+                li.search__dropdown-result
+                  a(href="#")=title
+              +result('giacomo+puccini')     
+              +result('genshin')     
+              +result('gurenge')     
+              +result('gravity falls')     
+             
+      .header__col
+        .header__control 
+          a(href="#").header__control-item.search-btn
+            i.icon-search 
+          a(href="#").header__control-item
+            i.icon-cloud 
+          a(href="#").header__control-item.log-in
+            i.icon-login

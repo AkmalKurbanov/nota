@@ -1,0 +1,96 @@
+extends layout/main/main
+block title
+  | main
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .profile
+        .banner
+          img(src="assets/img/profile-bg.jpg", alt="")
+        .content-wrap
+          .profile__img 
+            .profile__img-wrap 
+              img(src="assets/img/profile.png", alt="")
+          .profile__tabs 
+            .tab
+              ul.tabs
+                li
+                  a(href='#')
+                    span Основная информация
+                li
+                  a(href='#')
+                    span Мои загрузки
+              .tab_content
+                .tabs_item
+                  .profile__form
+                    form(action="") 
+                      .input 
+                        input(type="text" placeholder="Ваше имя") 
+                      .input 
+                        input(type="text" placeholder="Электронная почта") 
+                      .input 
+                        input(type="password" placeholder="Введите пароль")
+                        .pass-show.pass-control
+                          i.icon-eye 
+                        .pass-hide.pass-control
+                          i.icon-eye
+                      .input 
+                        input(type="password" placeholder="Повторите пароль")
+                        .pass-show.pass-control
+                          i.icon-eye 
+                        .pass-hide.pass-control
+                          i.icon-eye
+                      button.btn.btn--sc Сохранить изменения
+                .tabs_item
+                  .downloads
+                    .empty
+                      p Вы еще ничего не загружали
+                      a.btn.btn--fc(href="#")
+                        i.icon-plus
+                        | Добавить новую композицию
+                  .downloads
+                    .downloads__add    
+                      a.btn.btn--fc(href="#")
+                        i.icon-plus
+                        | Добавить новую композицию
+                    .items.items--column
+                      .items__wrap
+                        mixin item(operation)
+                          .items__item
+                            .items__col
+                              .items__item-img
+                                img(src="assets/img/note.jpg", alt="")
+                              .items__item-info
+                                a(href="#").items__item-name Gymnopédie No. 1 – Satie ClassicMan
+                                .items__item-add-info
+                                  span 
+                                    i.icon-clock
+                                    | 03:00
+                                  span 
+                                    i.icon-page
+                                    |  7 стр (4 части)
+                            .items__col
+                              if operation === "operation"
+                                a(href="#").btn.btn--sc.disabled
+                                  i.icon-check 
+                                  | На проверке
+                              else
+                                a(href="#").btn.btn--mc
+                                  i.icon-edit 
+                                  | Редактировать
+                              a(href="#").btn.btn--tc 
+                                i.icon-trash 
+                                | Удалить
+
+                        +item('operation')   
+                        +item    
+                        +item    
+                        +item    
+                        +item    
+                        +item    
+        include includes/log
+     
+
+
+  include includes/scripts 
