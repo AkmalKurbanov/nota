@@ -1,0 +1,39 @@
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $wc;
+  @include aic-jcc;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  padding: rem(15);
+  &__svg-wrap {
+    width: 100%;
+    max-width: rem(500);
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $wc;
+      transform: translateX(100%);
+      animation: note 2s linear;
+    }
+
+    @keyframes note {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@ body {
     content: '';
     @include adaptiv('height', 710, 400, 0);
     width: 100%;
-    background-image: url('../../assets/img/bg.png');
+    background-image: url('../../assets/img/bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -122,6 +122,7 @@ button {
 
 
 // logo
+.preloader .logo,
 .logo {
   @include adaptiv('max-width', 130, 80, 0);
   @include adaptiv('min-width', 130, 80, 0);
@@ -299,3 +300,12 @@ button {
 }
 
 // input end
+
+
+
+
+
+
+
+
+
