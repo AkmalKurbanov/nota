@@ -1,8 +1,6 @@
 .log {
   position: fixed;
   transition: $tr;
-  opacity: 0;
-  pointer-events: none;
   @include aic-jcc;
   background-color: rgba($bc, .5);
   width: 100%;
@@ -14,10 +12,6 @@
   z-index: 9;
   padding: rem(15);
 
-  &.open {
-    opacity: 1;
-    pointer-events: inherit;
-  }
 
   form {
     width: 100%;

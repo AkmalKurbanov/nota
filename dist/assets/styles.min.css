@@ -1488,8 +1488,6 @@ button,input {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
-  opacity: 0;
-  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1508,11 +1506,6 @@ button,input {
   left: 0;
   z-index: 9;
   padding: .9375rem;
-}
-
-.log.open {
-  opacity: 1;
-  pointer-events: inherit;
 }
 
 .log form {

@@ -1,0 +1,35 @@
+extends layout/main/main
+block title
+  | main
+block main
+  .wrapper
+    .content
+      
+ 
+      .log#registration
+        .log__window
+          .log__window-top
+            .log__title Регистрация
+            form(action="") 
+              .input
+                input(type="text" placeholder="Ваше имя")
+              .input
+                input(type="text" placeholder="Электронная почта")
+              .input
+                input(type="text" placeholder="Пароль")
+              button.btn.btn--sc Регистрация
+              p.alt войти через
+            .alternate
+              .alternate__item
+                img(src="assets/img/btn1.webp", alt="")
+              .alternate__item
+                img(src="assets/img/btn2.webp", alt="")
+              .alternate__item
+                img(src="assets/img/btn3.webp", alt="")
+          .log__window-bottom 
+            p Есть аккаунт?
+            a(href="#").btn.btn--mc.log-in Войти
+     
+
+
+  include includes/scripts 
