@@ -1,0 +1,19 @@
+extends layout/main/main
+block title
+  | main
+block main
+  .wrapper
+    .content
+      include includes/header/header
+      .content-wrap
+        .not-found 
+          .not-found__title 404 
+          .not-found__img 
+            img(src="assets/img/404.jpg", alt="") 
+          .not-found__subtitle Страница не найдена 
+        .not-found__btn-wrap 
+          a(href="#").btn.btn--mc Назад 
+          a(href="#").btn.btn--mc Гланая 
+
+
+  include includes/scripts 
