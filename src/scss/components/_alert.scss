@@ -1,0 +1,64 @@
+$success: #2fb344;
+$info: #4299e1;
+$warning: #f76707;
+$danger: #d63939;
+
+.alert-wrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-left: rem(10);
+}
+
+.alert {
+  background-color: $wc;
+  border-radius: rem(4) 0 0 rem(4);
+  box-shadow: rgba(29, 39, 59, .4) 0 2px 4px 0;
+  border: rem(1) solid rgba(97, 104, 118, 0.16);
+  @include adaptiv('padding', 15, 7, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: rem(4) solid;
+  @include adaptiv('margin-bottom', 10, 5, 0);
+  max-width: rem(500);
+  width: 100%;
+  transition: $tr;
+  transform: translateY(-10px);
+  pointer-events: none;
+  opacity: 0;
+  transition-delay: 1s;
+
+  &.fade {
+    transform: translateY(0);
+    pointer-events: inherit;
+    opacity: 1;
+  }
+
+  .alert-title {
+    @include adaptiv('margin-bottom', 10, 5, 0);
+    font-weight: 600;
+    @include adaptiv('font-size', 18, 14, 0);
+  }
+
+  .text-muted {
+    color: #616876;
+    @include adaptiv('font-size', 16, 12, 0);
+  }
+
+  &.alert-success {
+    color: $success;
+  }
+
+  &.alert-info {
+    color: $info;
+  }
+
+  &.alert-warning {
+    color: $warning;
+  }
+
+  &.alert-danger {
+    color: $danger;
+  }
+}

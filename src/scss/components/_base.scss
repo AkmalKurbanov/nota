@@ -296,16 +296,11 @@ button {
     }
   }
 
-
+  .invalid-feedback {
+    color: red;
+    @include adaptiv('font-size', 12, 10, 0);
+    padding-left: rem(5);
+  }
 }
 
 // input end
-
-
-
-
-
-
-
-
-

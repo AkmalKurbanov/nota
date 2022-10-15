@@ -561,6 +561,12 @@ button,input {
   display: none;
 }
 
+.input .invalid-feedback {
+  color: red;
+  font-size: calc(10px + 2 * ((100vw - 320px)/ 1600));
+  padding-left: .3125rem;
+}
+
 .header {
   background-color: #0e50b6;
   min-height: calc(50px + 35 * ((100vw - 320px)/ 1600));
@@ -1023,9 +1029,9 @@ button,input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 @media (max-width:991.98px) {
@@ -1688,4 +1694,80 @@ button,input {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
+}
+
+.alert-wrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding-left: .625rem;
+}
+
+.alert {
+  background-color: #fff;
+  border-radius: .25rem 0 0 .25rem;
+  -webkit-box-shadow: rgba(29,39,59,.4) 0 2px 4px 0;
+  box-shadow: rgba(29,39,59,.4) 0 2px 4px 0;
+  border: .0625rem solid rgba(97,104,118,.16);
+  padding: calc(7px + 8 * ((100vw - 320px)/ 1600));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-left: .25rem solid;
+  margin-bottom: calc(5px + 5 * ((100vw - 320px)/ 1600));
+  max-width: 31.25rem;
+  width: 100%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+.alert.fade {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  pointer-events: inherit;
+  opacity: 1;
+}
+
+.alert .alert-title {
+  margin-bottom: calc(5px + 5 * ((100vw - 320px)/ 1600));
+  font-weight: 600;
+  font-size: calc(14px + 4 * ((100vw - 320px)/ 1600));
+}
+
+.alert .text-muted {
+  color: #616876;
+  font-size: calc(12px + 4 * ((100vw - 320px)/ 1600));
+}
+
+.alert.alert-success {
+  color: #2fb344;
+}
+
+.alert.alert-info {
+  color: #4299e1;
+}
+
+.alert.alert-warning {
+  color: #f76707;
+}
+
+.alert.alert-danger {
+  color: #d63939;
 }

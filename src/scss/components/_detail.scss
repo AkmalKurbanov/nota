@@ -2,7 +2,7 @@
   @include adaptiv('margin-bottom', 80, 30, 0);
 
   &__wrap {
-    @include aife;
+    @include aifs;
 
     @include md {
       align-items: flex-start;

@@ -13,8 +13,10 @@ block main
             form(action="") 
               .input      
                 input(type="text" placeholder="Электронная почта")
+                span.invalid-feedback Поле обязательно для заполнения
               .input      
                 input(type="text" placeholder="Пароль")
+                span.invalid-feedback Поле обязательно для заполнения
               button.btn.btn--mc Продолжить
             a(href="#").forgot Забыли пароль?
             .alternate
