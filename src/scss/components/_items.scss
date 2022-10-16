@@ -9,31 +9,77 @@
     @include adaptiv('margin-bottom', 5, 20, 0);
 
     .items__wrap {
-      @include aistr-jfcsb;
+      @include aistr;
+      flex-wrap: wrap;
 
       @include lg {
         flex-wrap: wrap;
       }
 
+      @include sm {
+        justify-content: space-between;
+      }
+
       .items__item {
         width: calc(20% - 18px);
         margin-bottom: rem(20);
+        margin-right: rem(22);
 
         @include lg {
           width: calc(25% - 18px);
+          margin-right: rem(24);
         }
 
         @include md {
           width: calc(33% - 5px);
+          margin-right: rem(10);
         }
 
         @include sm {
           width: calc(50% - 5px);
+          margin-right: 0 !important;
         }
 
         @media (max-width: 370px) {
-          width: 100%;
+          width: 100% !important;
         }
+
+
+        &:nth-child(5n) {
+          margin-right: 0;
+
+          @include lg {
+            margin-right: rem(22);
+          }
+
+          @include md {
+            margin-right: rem(10);
+          }
+        }
+
+        &:nth-child(4n) {
+          @include lg {
+            margin-right: 0;
+          }
+
+          @include md {
+            margin-right: rem(10);
+          }
+        }
+
+        &:nth-child(3n) {
+          @include md {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(2n) {
+          @include sm {
+            margin-right: 0;
+          }
+        }
+
+
 
       }
     }
