@@ -1746,13 +1746,6 @@ button,input {
   }
 }
 
-.alert-wrap {
-  position: fixed;
-  right: 0;
-  top: 0;
-  padding-left: .625rem;
-}
-
 .alert {
   background-color: #fff;
   border-radius: .25rem 0 0 .25rem;
